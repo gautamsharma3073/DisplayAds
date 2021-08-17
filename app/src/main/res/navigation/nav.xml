@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/fullscreenFragment">
+
+    <fragment
+        android:id="@+id/fullscreenFragment"
+        android:name="com.example.displayads.FullscreenFragment"
+        android:label="fragment_fullscreen"
+        tools:layout="@layout/fragment_fullscreen" >
+        <action
+            android:id="@+id/action_fullscreenFragment_to_videoDisplayFragment"
+            app:destination="@id/videoDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDisplayFragment"
+        android:name="com.example.displayads.VideoDisplayFragment"
+        android:label="fragment_video_display"
+        tools:layout="@layout/fragment_video_display" >
+        <action
+            android:id="@+id/action_videoDisplayFragment_to_fullscreenFragment"
+            app:destination="@id/fullscreenFragment" />
+    </fragment>
+</navigation>
